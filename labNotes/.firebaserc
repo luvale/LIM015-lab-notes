@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "labnotes-luva": {
+      "hosting": {
+        "labNotes": [
+          "labnotes-luva"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "labnotes-luva"
+  }
+}
