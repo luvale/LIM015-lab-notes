@@ -8,14 +8,14 @@
 h1, h2 {
   margin: 0;
   font-weight: 500;
-  font-family: 'Gamja Flower', cursive;
+  font-family: $title;
   font-size: 35px;
   text-align: center;
 }
 h2 {
   margin-top: 20px;
   font-size: 25px;
-  font-family: 'Gaegu', cursive;
+  font-family: $text;
 }
 .green-pannel {
   background: $green;

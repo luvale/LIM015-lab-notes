@@ -1,0 +1,14 @@
+@import "../../../assets/variables";
+
+.note {
+  font-family: $text;
+  width: 80%;
+  background: $green-gradient;
+  border-radius: 37px;
+  height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 18px;  
+}

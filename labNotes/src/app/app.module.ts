@@ -10,11 +10,13 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { LoginComponent } from './views/login/login.component';
+import { MyNotesComponent } from './views/my-notes/my-notes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    MyNotesComponent
   ],
   imports: [
     BrowserModule,
