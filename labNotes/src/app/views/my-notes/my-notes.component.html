@@ -4,16 +4,16 @@
     Create new note
   </article>
   <section class="allNotes">
-    <article class="notes">
+    <article class="notes" *ngFor="let note of notes">
       <header>
-        <h3>Title</h3>
+        <h3>{{note.note_title}}</h3>
         <button class="delete-btn">
           <i class="fa-solid fa-trash"></i>
         </button>
       </header>
       <div class="note-content">
         <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an.
+          {{note.note_content}}
         </p>
         <div class="edit">
           Tap the note to continue

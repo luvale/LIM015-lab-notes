@@ -8,13 +8,7 @@ export class CredentialsService {
 
   constructor() { }
 
-  isAuthenticated(): boolean {
-    return this.credentials;
-  }
   setCredentials(userInfo:any): void {
     this.credentials = userInfo;
-  }
-  getCredentials() {
-    return this.credentials;
   }
 }
