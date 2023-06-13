@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 import { CredentialsService } from 'src/app/services/credentials.service';
 import { Router } from '@angular/router';
+import { User } from 'src/app/interfaces/user';
 
 @Component({
   selector: 'app-login',
@@ -20,17 +21,19 @@ export class LoginComponent implements OnInit {
   }
   loginWithGoogle() {
     this.authService.loginWithGoogle()
-    .then((user) => {
-      //console.log(user.user);
-      const userCredentials = {
+    .then((user:any) => {
+      const userCredentials: User = {
         name: user.user.displayName,
         email: user.user.email,
         photo: user.user.photoURL
       }
-      //console.log(userCredentials)
       this.credentialsService.setCredentials(userCredentials);
       this.router.navigate(['my-notes']);
     })
     .catch((err) => console.log(err))
+  }
+
+  logOut() { 
+    localStorage.removeItem("me");
   }
 }
