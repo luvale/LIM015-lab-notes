@@ -12,7 +12,8 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  align-items: center;  
+  align-items: center;
+  gap: 15px;
 }
 .green-btn {
   height: 74px;
@@ -20,7 +21,6 @@
 .green-btn,
 .notes {
   font-family: $text;
-  width: 80%;
   background: $green-gradient;
   border-radius: 37px;
   display: flex;
@@ -30,7 +30,13 @@
   font-size: 18px;  
   cursor: pointer;
 }
+a {
+  width: 80%;
+  text-decoration: none;
+  color: black;
+}
 .notes {
+  width: 80%;
   flex-direction: column;
   gap: 15px;
   padding: 20px;

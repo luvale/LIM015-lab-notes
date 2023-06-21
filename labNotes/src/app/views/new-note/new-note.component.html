@@ -1,0 +1,11 @@
+<section class="new-note">
+  <header>
+    <textarea class="title" placeholder="Insert title" [(ngModel)]="title" autosize></textarea>
+    <button class="save-btn" (click)="saveNote()">
+      <i class="fa-solid fa-floppy-disk"></i>
+    </button>
+  </header>
+  <section class="content">
+    <textarea class="content-input" placeholder="Insert your note content" [(ngModel)]="noteContent" autosize></textarea>
+  </section>
+</section>

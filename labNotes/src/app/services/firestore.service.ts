@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Firestore, collection, collectionData } from '@angular/fire/firestore';
+import { Firestore, collection, collectionData, addDoc } from '@angular/fire/firestore';
 import { Observable } from 'rxjs'
 
 @Injectable({
@@ -14,5 +14,9 @@ export class FirestoreService {
   getMyNotes(userEmail:string): Observable<any> {
     const placeRef = collection(this.firestore, 'notes-' + userEmail);
     return collectionData(placeRef) as Observable<any>;
+  }
+  saveNote(userEmail:string, note:any) {
+    const placeRef = collection(this.firestore, 'notes-' + userEmail);
+    return addDoc(placeRef, note);
   }
 }

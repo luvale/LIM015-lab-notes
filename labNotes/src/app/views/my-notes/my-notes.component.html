@@ -1,8 +1,10 @@
 <section class="container">
-  <article class="green-btn">
-    <i class="fa-solid fa-pencil"></i>
-    Create new note
-  </article>
+  <a [routerLink]="['/new-note']">
+    <article class="green-btn">
+      <i class="fa-solid fa-pencil"></i>
+      Create new note
+    </article>
+  </a>
   <section class="allNotes">
     <article class="notes" *ngFor="let note of notes">
       <header>
