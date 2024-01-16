@@ -3,8 +3,6 @@
 
 body {
   margin: 0;
-  width: 100vw;
-  height: 100vh;
   font-weight: 400;
   background: $melon;
 }
@@ -15,5 +13,4 @@ button {
   cursor: pointer;
 }
 
-html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

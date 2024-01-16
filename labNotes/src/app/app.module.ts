@@ -15,13 +15,15 @@ import { LoginComponent } from './views/login/login.component';
 import { MyNotesComponent } from './views/my-notes/my-notes.component';
 import { NewNoteComponent } from './views/new-note/new-note.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EditComponent } from './views/edit/edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     MyNotesComponent,
-    NewNoteComponent
+    NewNoteComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,

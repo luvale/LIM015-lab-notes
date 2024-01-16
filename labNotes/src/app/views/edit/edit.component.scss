@@ -1,9 +1,9 @@
 @import "../../../assets/variables";
 
 .new-note {
-  padding: 20px;
+  padding: 25px 20px 0;
   background: $green-gradient;
-  height: 100vh;
+  height: auto;
   display: flex;
   gap: 10px;
   flex-direction: column;  

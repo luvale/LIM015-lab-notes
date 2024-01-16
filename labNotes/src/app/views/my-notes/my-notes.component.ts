@@ -9,7 +9,7 @@ import { FirestoreService } from 'src/app/services/firestore.service';
 })
 export class MyNotesComponent implements OnInit {
   userEmail:string = '';
-  notes:any;
+  notes:any = [];
 
   constructor(
     private readonly firestoreService: FirestoreService,
@@ -21,10 +21,16 @@ export class MyNotesComponent implements OnInit {
     this.userEmail = this.credentialsService.credentials.email;
     this.getMyNotes();
   }
-  getMyNotes() {
-    this.firestoreService.getMyNotes(this.userEmail).subscribe((notes) => {
-      console.log(notes);
-      this.notes = notes;
-    })
+  async getMyNotes() {
+    const data = await this.firestoreService.getMyNotes(this.userEmail)
+    data.forEach((doc) => {
+      const content = {
+        id : doc.id,
+        note_content: doc.data()['note_content'],
+        note_title: doc.data()['note_title']
+      }
+      this.notes.push(content);
+    });
+    console.log(this.notes)
   }
 }

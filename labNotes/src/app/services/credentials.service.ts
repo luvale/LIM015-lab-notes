@@ -11,7 +11,6 @@ export class CredentialsService {
     const getUser = localStorage.getItem("me");
     if (getUser) {
       this.credentials = JSON.parse(getUser);
-      console.log(this.credentials);
     }
   }
 

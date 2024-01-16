@@ -1,4 +1,4 @@
-<section class="container">
+<section class="containerNotes">
   <a [routerLink]="['/new-note']">
     <article class="green-btn">
       <i class="fa-solid fa-pencil"></i>
@@ -6,7 +6,7 @@
     </article>
   </a>
   <section class="allNotes">
-    <article class="notes" *ngFor="let note of notes">
+    <article class="notes" *ngFor="let note of notes" [routerLink]="['/edit/', note.id]">
       <header>
         <h3>{{note.note_title}}</h3>
         <button class="delete-btn">
