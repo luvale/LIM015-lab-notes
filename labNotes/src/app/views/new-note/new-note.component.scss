@@ -1,9 +1,9 @@
 @import "../../../assets/variables";
 
 .new-note {
-  padding: 20px;
+  padding: 25px 20px;
   background: $green-gradient;
-  height: 100vh;
+  height: auto;
   display: flex;
   gap: 10px;
   flex-direction: column;  
@@ -46,7 +46,7 @@ textarea:focus,
 .content {
   background: white;
   font-family: $text;
-  border-radius: 40px 40px 0 0;
+  border-radius: 40px;
   height: auto;
   min-height: 100%;
   padding: 25px 20px;
