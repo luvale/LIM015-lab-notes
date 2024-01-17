@@ -26,9 +26,6 @@ export class NewNoteComponent implements OnInit {
       note_title: this.title,
       note_content : this.noteContent
     }
-    console.log(this.title)
-    console.log(this.noteContent)
     const saved = await this.firestoreService.saveNote(this.userEmail, note);
-    console.log(saved)
   }
 }

@@ -17,7 +17,6 @@ export class MyNotesComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    console.log(this.credentialsService.credentials.email)
     this.userEmail = this.credentialsService.credentials.email;
     this.getMyNotes();
   }
@@ -32,10 +31,8 @@ export class MyNotesComponent implements OnInit {
       }
       this.notes.push(content);
     });
-    console.log(this.notes)
   }
   deleteNote(note: any) {
-    console.log(note.id);
     this.firestoreService.deleteNote(this.userEmail, note.id);
     this.getMyNotes();
   }

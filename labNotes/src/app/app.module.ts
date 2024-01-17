@@ -16,6 +16,7 @@ import { MyNotesComponent } from './views/my-notes/my-notes.component';
 import { NewNoteComponent } from './views/new-note/new-note.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EditComponent } from './views/edit/edit.component';
+import { UserBarComponent } from './components/user-bar/user-bar.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { EditComponent } from './views/edit/edit.component';
     LoginComponent,
     MyNotesComponent,
     NewNoteComponent,
-    EditComponent
+    EditComponent,
+    UserBarComponent
   ],
   imports: [
     BrowserModule,
@@ -36,6 +38,9 @@ import { EditComponent } from './views/edit/edit.component';
     provideFirestore(() => getFirestore()),
     BrowserAnimationsModule,
     AutosizeModule
+  ],
+  exports: [
+    UserBarComponent
   ],
   providers: [
     ScreenTrackingService,UserTrackingService

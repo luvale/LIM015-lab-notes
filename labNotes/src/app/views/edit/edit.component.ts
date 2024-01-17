@@ -38,8 +38,6 @@ export class EditComponent implements OnInit {
       note_title: this.title,
       note_content : this.noteContent
     }
-    console.log(this.title)
-    console.log(this.noteContent)
     this.firestoreService.updateNote(this.userEmail, note, this.noteId);
   }
 }
