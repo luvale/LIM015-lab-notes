@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CredentialsService } from 'src/app/services/credentials.service';
+import { AuthService } from 'src/app/services/auth.service';
+import { Router } from '@angular/router';
 import { User } from '../../interfaces/user';
 
 @Component({
@@ -10,18 +12,23 @@ import { User } from '../../interfaces/user';
 export class UserBarComponent implements OnInit {
   user: User = {
     name: '',
-    email:'',
-    photo:''
+    email: '',
+    photo: ''
   }
 
   constructor(
-    private credentialsService: CredentialsService
-    ) { }
+    private credentialsService: CredentialsService,
+    private readonly authService: AuthService,
+    private router: Router,
+  ) { }
 
   ngOnInit(): void {
-    console.log(this.credentialsService.credentials);
     this.user = this.credentialsService.credentials;
-
   }
-
+  logOut() {
+    this.authService.logOut().then((user:any) => {
+      localStorage.removeItem("me");
+      this.router.navigate(['']);
+    });
+  }
 }
