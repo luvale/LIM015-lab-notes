@@ -10,6 +10,7 @@ import { FirestoreService } from 'src/app/services/firestore.service';
 export class MyNotesComponent implements OnInit {
   userEmail: string = '';
   notes: any = [];
+  isLoading = true;
 
   constructor(
     private readonly firestoreService: FirestoreService,
@@ -31,6 +32,7 @@ export class MyNotesComponent implements OnInit {
       }
       this.notes.push(content);
     });
+    this.isLoading = false;
   }
   deleteNote(note: any) {
     this.firestoreService.deleteNote(this.userEmail, note.id);

@@ -6,7 +6,7 @@
       Create new note
     </article>
   </a>
-  <section class="allNotes">
+  <section class="allNotes" *ngIf="!isLoading; else spinner">
     <article class="notes" *ngFor="let note of notes" [routerLink]="['/edit/', note.id]">
       <header>
         <h3>{{note.note_title}}</h3>
@@ -24,4 +24,9 @@
       </div>
     </article>
   </section>
+  <ng-template #spinner>
+    <article class="spinner">
+      <mat-spinner [diameter]="70"></mat-spinner>
+    </article>
+  </ng-template>
 </section>
