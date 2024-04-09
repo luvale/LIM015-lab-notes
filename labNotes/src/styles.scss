@@ -14,3 +14,7 @@ button {
 }
 
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.custom-dialog .mat-dialog-container {
+  border-radius: 37px !important;
+}

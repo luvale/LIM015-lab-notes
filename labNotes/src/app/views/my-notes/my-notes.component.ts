@@ -39,7 +39,7 @@ export class MyNotesComponent implements OnInit {
   }
   openDeleteDialog(note:any) {
     const dialogRef = this.dialog.open(DeleteNoteDialogComponent, {
-      width: '300px',
+      panelClass: 'custom-dialog'
     });
 
     dialogRef.afterClosed().subscribe((result) => {
