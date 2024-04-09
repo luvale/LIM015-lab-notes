@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CredentialsService } from 'src/app/services/credentials.service';
 import { FirestoreService } from 'src/app/services/firestore.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-edit',
@@ -17,6 +18,7 @@ export class EditComponent implements OnInit {
   constructor(
     private readonly firestoreService: FirestoreService,
     private credentialsService: CredentialsService,
+    private _snackBar: MatSnackBar
   ) { }
 
   ngOnInit(): void {
@@ -41,5 +43,11 @@ export class EditComponent implements OnInit {
       note_content : this.noteContent
     }
     this.firestoreService.updateNote(this.userEmail, note, this.noteId);
+    this.openSnackBar();
+  }
+  openSnackBar() {
+    this._snackBar.open("Note saved", "", {
+      duration: 3000,
+    });
   }
 }
