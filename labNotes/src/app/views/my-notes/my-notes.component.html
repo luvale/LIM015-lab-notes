@@ -10,7 +10,7 @@
     <article class="notes" *ngFor="let note of notes" [routerLink]="['/edit/', note.id]">
       <header>
         <h3>{{note.note_title}}</h3>
-        <button class="delete-btn" (click)="deleteNote(note); $event.stopPropagation()">
+        <button class="delete-btn" (click)="openDeleteDialog(note); $event.stopPropagation()">
           <i class="fa-solid fa-trash"></i>
         </button>
       </header>

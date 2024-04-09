@@ -8,13 +8,13 @@
 h1, h2 {
   margin: 0;
   font-weight: 500;
-  font-family: $title;
-  font-size: 35px;
+  font-family: $text;
+  font-size: 30px;
   text-align: center;
 }
 h2 {
   margin-top: 20px;
-  font-size: 25px;
+  font-size: 20px;
   font-family: $text;
 }
 .green-pannel {
@@ -30,7 +30,7 @@ h2 {
   display: flex;
   justify-content: center;
   gap: 50px;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 .icon-btn {
   border: 3px solid $dark-pink;

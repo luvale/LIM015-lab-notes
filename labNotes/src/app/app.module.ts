@@ -5,6 +5,8 @@ import {AutosizeModule} from 'ngx-autosize';
 
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatButtonModule} from '@angular/material/button';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +22,7 @@ import { NewNoteComponent } from './views/new-note/new-note.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EditComponent } from './views/edit/edit.component';
 import { UserBarComponent } from './components/user-bar/user-bar.component';
+import { DeleteNoteDialogComponent } from './components/delete-note-dialog/delete-note-dialog.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,8 @@ import { UserBarComponent } from './components/user-bar/user-bar.component';
     MyNotesComponent,
     NewNoteComponent,
     EditComponent,
-    UserBarComponent
+    UserBarComponent,
+    DeleteNoteDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +46,9 @@ import { UserBarComponent } from './components/user-bar/user-bar.component';
     BrowserAnimationsModule,
     AutosizeModule,
     MatProgressSpinnerModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatDialogModule,
+    MatButtonModule
   ],
   exports: [
     UserBarComponent

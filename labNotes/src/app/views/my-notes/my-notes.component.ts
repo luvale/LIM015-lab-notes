@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { DeleteNoteDialogComponent } from 'src/app/components/delete-note-dialog/delete-note-dialog.component';
 import { CredentialsService } from 'src/app/services/credentials.service';
 import { FirestoreService } from 'src/app/services/firestore.service';
 
@@ -14,7 +16,8 @@ export class MyNotesComponent implements OnInit {
 
   constructor(
     private readonly firestoreService: FirestoreService,
-    private credentialsService: CredentialsService
+    private credentialsService: CredentialsService,
+    public dialog: MatDialog
   ) { }
 
   ngOnInit(): void {
@@ -33,6 +36,18 @@ export class MyNotesComponent implements OnInit {
       this.notes.push(content);
     });
     this.isLoading = false;
+  }
+  openDeleteDialog(note:any) {
+    const dialogRef = this.dialog.open(DeleteNoteDialogComponent, {
+      width: '300px',
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      if(result) {
+        this.isLoading = true;
+        this.deleteNote(note);
+      }
+    });
   }
   deleteNote(note: any) {
     this.firestoreService.deleteNote(this.userEmail, note.id);

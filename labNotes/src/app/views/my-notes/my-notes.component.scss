@@ -27,7 +27,7 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  font-size: 18px;  
+  font-size: 16px;  
   cursor: pointer;
 }
 a {
@@ -47,8 +47,8 @@ a {
     justify-content: space-between;
   }
   h3 {
-    font-size: 22px;
-    font-family: $title;
+    font-size: 18px;
+    font-family: $text;
   }
   .edit {
     color: #888888;
