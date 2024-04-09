@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import {AutosizeModule} from 'ngx-autosize';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -37,7 +38,8 @@ import { UserBarComponent } from './components/user-bar/user-bar.component';
     provideDatabase(() => getDatabase()),
     provideFirestore(() => getFirestore()),
     BrowserAnimationsModule,
-    AutosizeModule
+    AutosizeModule,
+    MatProgressSpinnerModule
   ],
   exports: [
     UserBarComponent

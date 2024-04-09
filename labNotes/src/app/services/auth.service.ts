@@ -3,7 +3,6 @@ import { Auth,
   signOut, 
   signInWithPopup, 
   GoogleAuthProvider, 
-  FacebookAuthProvider,
 } from '@angular/fire/auth';
 
 @Injectable({

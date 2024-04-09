@@ -1,4 +1,4 @@
-<section class="new-note">
+<section class="new-note" *ngIf="!isLoading; else spinner">
   <header>
     <textarea class="title" placeholder="Insert title" [(ngModel)]="title" autosize></textarea>
     <button class="save-btn" (click)="updateNote()">
@@ -9,3 +9,8 @@
     <textarea class="content-input" placeholder="Insert your note content" [(ngModel)]="noteContent" autosize></textarea>
   </section>
 </section>
+<ng-template #spinner>
+  <article class="spinner">
+    <mat-spinner></mat-spinner>
+  </article>
+</ng-template>

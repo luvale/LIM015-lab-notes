@@ -12,6 +12,7 @@ export class EditComponent implements OnInit {
   noteContent:any = '';
   userEmail:string = '';
   noteId:string = '';
+  isLoading = true;
 
   constructor(
     private readonly firestoreService: FirestoreService,
@@ -28,6 +29,7 @@ export class EditComponent implements OnInit {
     if (docSnap.exists()) {
       this.title = docSnap.data()['note_title'];
       this.noteContent = docSnap.data()['note_content'];
+      this.isLoading = false;
     } else {
       // docSnap.data() will be undefined in this case
       console.log("No existe ese documento");
