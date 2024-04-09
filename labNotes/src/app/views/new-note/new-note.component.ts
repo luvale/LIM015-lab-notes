@@ -9,8 +9,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./new-note.component.scss']
 })
 export class NewNoteComponent implements OnInit {
-  title:any = '';
-  noteContent:any = '';
+  title:string = '';
+  noteContent:string = '';
   userEmail:string = '';
 
   constructor(

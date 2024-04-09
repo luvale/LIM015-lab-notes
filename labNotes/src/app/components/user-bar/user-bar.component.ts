@@ -26,7 +26,7 @@ export class UserBarComponent implements OnInit {
     this.user = this.credentialsService.credentials;
   }
   logOut() {
-    this.authService.logOut().then((user:any) => {
+    this.authService.logOut().then(() => {
       localStorage.removeItem("me");
       this.router.navigate(['']);
     });

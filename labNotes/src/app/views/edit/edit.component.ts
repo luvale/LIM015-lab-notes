@@ -9,11 +9,11 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./edit.component.scss']
 })
 export class EditComponent implements OnInit {
-  title:any = '';
-  noteContent:any = '';
+  title:string = '';
+  noteContent:string = '';
   userEmail:string = '';
   noteId:string = '';
-  isLoading = true;
+  isLoading:boolean = true;
 
   constructor(
     private readonly firestoreService: FirestoreService,
