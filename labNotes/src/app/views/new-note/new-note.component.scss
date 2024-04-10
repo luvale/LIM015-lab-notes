@@ -1,0 +1,67 @@
+@import "../../../assets/variables";
+
+.new-note {
+  padding: 25px 20px;
+  background: $green-gradient;
+  height: auto;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;  
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+}
+.title {
+  font-family: $text;
+  font-size: 18px;
+  margin: 0;
+}
+input,
+textarea {
+  border: none;
+  background: none;
+  resize: none;
+  width: 100%;
+}
+input:focus,
+textarea:focus,
+.textarea:focus {
+  outline: none;
+}
+.textarea {
+  display: block;
+  width: 100%;
+  line-height: 30px;
+  resize: both;
+}
+
+.textarea[contenteditable]:empty::before {
+  content: "Insert title";
+  color: gray;
+}
+.content {
+  background: white;
+  font-family: $text;
+  border-radius: 40px;
+  height: auto;
+  min-height: 100%;
+  padding: 25px 20px;
+}
+.content-input {
+  width: 100%;
+  min-height: 100%;
+  height: auto;
+  font-family: $text;
+  font-size: 16px;
+}
+.save-btn {
+  background: rgba(255, 255, 255, 0.7);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  font-size: 20px;  
+}

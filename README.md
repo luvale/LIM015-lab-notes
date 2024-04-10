@@ -2,8 +2,7 @@
 
 ## Índice
 
-* [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del Proyecto](#2-resumen-del-proyecto)
+* [1. Resumen del Proyecto](#2-resumen-del-proyecto)
 * [3. Objetivos de Aprendizaje](#3-objetivos-de-aprendizaje)
 * [4. Consideraciones generales](#4-consideraciones-generales)
 * [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
@@ -11,32 +10,7 @@
 * [7. Pistas, tips y lecturas complementarias](#7-pistas-tips-y-lecturas-complementarias)
 
 ***
-
-## 1. Preámbulo
-
-Hoy en día no es práctico imaginar el desarrollo web sin HTML, CSS y JavaScript,
-esta última es el alma del desarrollo de aplicaciones web.
-[React](https://reactjs.org/) y [Vue](https://vuejs.org/)
-son algunos de los _frameworks_ y _librerías_ de JavaScript más utilizados por
-lxs desarrolladorxs alrededor del mundo, y hay una razón para eso.
-En el contexto del navegador, [_mantener la interfaz sincronizada con el estado
-es difícil_](https://medium.com/dailyjs/the-deepest-reason-why-modern-javascript-frameworks-exist-933b86ebc445).
-Al elegir un _framework_ o _librería_ para nuestra interfaz, nos apoyamos en una
-serie de convenciones e implementaciones _probadas_ y _documentadas_ para
-resolver un problema común a toda interfaz web. Esto nos permite concentrarnos
-mejor (dedicar más tiempo) en las características _específicas_ de
-nuestra aplicación.
-
-Cuando elegimos una de estas tecnologías no solo importamos un pedacito de
-código para reusarlo (lo cual es un gran valor per se), si no que adoptamos una
-**arquitectura**, una serie de **principios de diseño**, un **paradigma**, unas
-**abstracciones**, un **vocabulario**, una **comunidad**, etc.
-
-Como desarrolladora front-end, estos kits de desarrollo pueden resultarte
-de gran ayuda para implementar rápidamente características de los proyectos en
-los que trabajes.
-
-## 2. Resumen del Proyecto
+## 1. Resumen del Proyecto
 
 No existe día que no tomemos notas, siempre necesitamos apuntar alguna
 dirección, número telefónico, notas de alguna reunión o guardar nuestras URLs
@@ -48,22 +22,14 @@ de la nota lo cual da como resultado una nota perdida.
 Hoy en día las personas contamos con algún dispositivo móvil o
 laptop y además nos estamos preocupando por implementar acciones para
 salvar el medio ambiente, además el uso de notas en el trabajo remoto se vuelve
-indispensable para aquello que debemos apuntar en el día con día, por ello a una
-Laboratorian se le ocurre la idea de tener una herramienta como una web app para tomar notas, 
-que nos permita crear, editar, eliminar y consultar las notas en cualquier
+indispensable para aquello que debemos apuntar en el día con día, por ello este proyecto se trata de una herramienta como una web app para tomar notas, que nos permita crear, editar, eliminar y consultar las notas en cualquier
 momento.
-
-Ella está enamorada de la idea y quiere llevarla a cabo, pero no tiene el tiempo
-necesario para empezar el proyecto, planea que sea un proyecto independiente a
-su trabajo, por ello está buscando algunas colaboradoras dentro de la comunidad
-de Laboratoria para implementar la idea, por lo cual te invitamos a colaborar.
 
 ![Shows CRUD functionalities](https://raw.githubusercontent.com/florenciasilva/lab-notes/master/demo-crud.gif?token=AGJBHNTVAQRWOVF2IGMP6FK5NVFAS)
 
-Para este proyecto necesitas crear una Web App con `VUE o REACT JS` y `Firebase`.
+Para este proyecto usé Angular.
 
-Si bien la temática es libre, tu aplicación tendrá que tener ciertas
-funcionalidades básicas:
+Funcionalidades básicas:
 
 * Autenticación con correo y/o Google y/o Facebook.
 * Cerrar sesión.
@@ -101,8 +67,6 @@ cómo cada cambio sobre el estado se va a ir reflejando en la interfaz (por
 ejemplo, cada vez que agregamos una _nota_, la interfaz debe actualizar la lista
 de notas).
 
-![Framewoks-img](https://miro.medium.com/max/1400/1*WRzDZndJCduHwqgOpWmbhQ.png)
-
 ### HTML y CSS
 
 * [ ] HTML semántico
@@ -113,37 +77,6 @@ de notas).
 
 * [ ] Componentes
 * [ ] Manejo de estado
-
-### React
-
-* [ ] ¿Qué es React?
-* [ ] Virtual DOM
-* [ ] ReactDOM rendering
-* [ ] [`¿Qué es un componente de React?`](https://es.reactjs.org/docs/components-and-props.html)
-* [ ] [`JSX`](https://es.reactjs.org/docs/introducing-jsx.html)
-* [ ] Props
-* [ ] Renderizado condicional (?)
-* [ ] State(ej: `this.state`, `useState`,`context`, `redux`, ...)
-* [ ] [`Manejo de eventos`](https://es.reactjs.org/docs/handling-events.html)
-* [ ] Refs
-* [ ] [`Component Lifecycle`](https://es.reactjs.org/docs/hooks-effect.html)
-* [ ] [`React Router`](https://reacttraining.com/react-router/web)
-
-### Vue
-
-* [ ] [`Instancia de Vue.js`](https://es.vuejs.org/v2/guide/instance.html)
-* [ ] [`Datos y métodos`](https://es.vuejs.org/v2/guide/instance.html#Datos-y-Metodos)
-* [ ] [`Uso y creación de Componentes`](https://vuejs.org/v2/guide/components.html)
-* [ ] [`Props`](https://es.vuejs.org/v2/guide/components.html#Pasando-datos-a-componentes-secundarios-con-Props)
-* [ ] Directivas ([v-bind](https://es.vuejs.org/v2/api/#v-bind) | [v-model](https://es.vuejs.org/v2/guide/forms.html))
-* [ ] Renderizado condicional ([v-if](https://es.vuejs.org/v2/guide/conditional.html#v-if)
-      | [v-else](https://es.vuejs.org/v2/guide/conditional.html#v-else))
-* [ ] Iteraciones ([v-for](https://es.vuejs.org/v2/guide/list.html#Mapeando-una-matriz-a-elementos-con-v-for))
-* [ ] Eventos ([v-on](https://es.vuejs.org/v2/guide/events.html))
-* [ ] [`Propiedades Computadas y Observadores`](https://es.vuejs.org/v2/guide/computed.html)
-* [ ] [`Router`](https://router.vuejs.org/guide/#html)
-* [ ] [`Clases y Estilos`](https://es.vuejs.org/v2/guide/class-and-style.html)
-* [ ] [`Gestión de Estado`](https://es.vuejs.org/v2/guide/state-management.html#Gestion-de-estado-simple-desde-cero)
 
 ### Firebase
 

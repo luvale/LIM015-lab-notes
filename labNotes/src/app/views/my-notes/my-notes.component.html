@@ -1,0 +1,32 @@
+<section class="containerNotes">
+  <app-user-bar></app-user-bar>
+  <a [routerLink]="['/new-note']">
+    <article class="green-btn">
+      <i class="fa-solid fa-pencil"></i>
+      Create new note
+    </article>
+  </a>
+  <section class="allNotes" *ngIf="!isLoading; else spinner">
+    <article class="notes" *ngFor="let note of notes" [routerLink]="['/edit/', note.id]">
+      <header>
+        <h3>{{note.note_title}}</h3>
+        <button class="delete-btn" (click)="openDeleteDialog(note); $event.stopPropagation()">
+          <i class="fa-solid fa-trash"></i>
+        </button>
+      </header>
+      <div class="note-content">
+        <p>
+          {{note.note_content}}
+        </p>
+        <div class="edit">
+          Tap the note to continue
+        </div>
+      </div>
+    </article>
+  </section>
+  <ng-template #spinner>
+    <article class="spinner">
+      <mat-spinner [diameter]="70"></mat-spinner>
+    </article>
+  </ng-template>
+</section>
