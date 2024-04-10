@@ -1,7 +1,7 @@
 {
-  "name": "labNotes",
-  "short_name": "labNotes",
-  "theme_color": "#1976d2",
+  "name": "Labnotes",
+  "short_name": "Labnotes",
+  "theme_color": "#C7EBB3",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "./",
