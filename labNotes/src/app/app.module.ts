@@ -23,6 +23,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EditComponent } from './views/edit/edit.component';
 import { UserBarComponent } from './components/user-bar/user-bar.component';
 import { DeleteNoteDialogComponent } from './components/delete-note-dialog/delete-note-dialog.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,13 @@ import { DeleteNoteDialogComponent } from './components/delete-note-dialog/delet
     MatProgressSpinnerModule,
     MatSnackBarModule,
     MatDialogModule,
-    MatButtonModule
+    MatButtonModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
   ],
   exports: [
     UserBarComponent
