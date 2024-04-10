@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { DeleteNoteDialogComponent } from 'src/app/components/delete-note-dialog/delete-note-dialog.component';
+import { Note } from 'src/app/interfaces/note';
 import { CredentialsService } from 'src/app/services/credentials.service';
 import { FirestoreService } from 'src/app/services/firestore.service';
 
@@ -11,7 +12,7 @@ import { FirestoreService } from 'src/app/services/firestore.service';
 })
 export class MyNotesComponent implements OnInit {
   userEmail: string = '';
-  notes: any = [];
+  notes: Note[] = [];
   isLoading = true;
 
   constructor(
@@ -37,7 +38,7 @@ export class MyNotesComponent implements OnInit {
     });
     this.isLoading = false;
   }
-  openDeleteDialog(note:any) {
+  openDeleteDialog(note:Note) {
     const dialogRef = this.dialog.open(DeleteNoteDialogComponent, {
       panelClass: 'custom-dialog'
     });
