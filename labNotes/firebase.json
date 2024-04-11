@@ -1,9 +1,0 @@
-{
-  "hosting": [
-    {
-      "target": "labNotes",
-      "source": ".",
-      "frameworksBackend": {}
-    }
-  ]
-}
