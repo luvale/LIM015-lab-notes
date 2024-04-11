@@ -111,10 +111,11 @@
           }
         },
         "deploy": {
-          "builder": "@angular/fire:deploy",
+          "builder": "@angular-devkit/build-angular:github-pages",
           "options": {
-            "version": 2,
-            "browserTarget": "labNotes:build:production"
+            "outputPath": "dist/labNotes",
+            "baseHref": "/<nombre-de-tu-repositorio>/",
+            "githubPages": true
           }
         }
       }

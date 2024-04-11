@@ -1,0 +1,91 @@
+{
+  "configVersion": 1,
+  "timestamp": 1712813925367,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/favicon.ico",
+        "/index.html",
+        "/main.04d8f9d596bf56b6.js",
+        "/manifest.webmanifest",
+        "/polyfills.dcf11eb6b8dff945.js",
+        "/runtime.fc54ef4d860c745e.js",
+        "/styles.49bb38fab51fb71e.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/assets/_variables.scss",
+        "/assets/icons/icon-128x128.png",
+        "/assets/icons/icon-144x144.png",
+        "/assets/icons/icon-152x152.png",
+        "/assets/icons/icon-192x192.png",
+        "/assets/icons/icon-384x384.png",
+        "/assets/icons/icon-512x512.png",
+        "/assets/icons/icon-72x72.png",
+        "/assets/icons/icon-96x96.png",
+        "/assets/imgs/create-note.png",
+        "/assets/imgs/login.png",
+        "/assets/imgs/logo.svg",
+        "/assets/imgs/notes-list.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/assets/_variables.scss": "771c3a1acc0cfe3aff93ca813d9848b3e6bf7e1e",
+    "/assets/icons/icon-128x128.png": "062a1a0f161e15e8b24ee2f1370bbbd5e59d326e",
+    "/assets/icons/icon-144x144.png": "bd53536f6a8380d80e0d782d84b7d8fbe60e50db",
+    "/assets/icons/icon-152x152.png": "e0831466f45afc92f3af9f6a91a44281e9fb98d9",
+    "/assets/icons/icon-192x192.png": "8e1e09f53cff5f8d3c734744f81595a0c736b7de",
+    "/assets/icons/icon-384x384.png": "b524614a3fc5cf10a1eb930392c6086ccf6db552",
+    "/assets/icons/icon-512x512.png": "fca0e36e4881eb76f7dd61fe557482ddd1444247",
+    "/assets/icons/icon-72x72.png": "e2e44b4a37734cbc2711c87fdd3714f75fbdd112",
+    "/assets/icons/icon-96x96.png": "51979f8b085cd06f709cd43fd601635fbcef6052",
+    "/assets/imgs/create-note.png": "28aacbbbaf0ed212c7aeb6850b6ff91fbaa90534",
+    "/assets/imgs/login.png": "4e6a5beb98bc651821634c28561d80fce50d1304",
+    "/assets/imgs/logo.svg": "83761733917b08884bd51db90068c27d5fab8492",
+    "/assets/imgs/notes-list.png": "0fe2e38cf30243e3644556f8a94712e46619c0de",
+    "/favicon.ico": "daeac544dc9e2e76b0bb38537d487e2a707505c4",
+    "/index.html": "e18fc9718e41ae22f9ede6defc092938711b4fde",
+    "/main.04d8f9d596bf56b6.js": "0da00073343a63daf7040a69158801cd5eac93e6",
+    "/manifest.webmanifest": "4c28e5a12f0d9550167e55ace276577123f72cca",
+    "/polyfills.dcf11eb6b8dff945.js": "fbf2f044dc60b3d07dce6d8b8a4e5ac028ac59da",
+    "/runtime.fc54ef4d860c745e.js": "531afda318c6c54fdcee78da24ada5aff8f94b7e",
+    "/styles.49bb38fab51fb71e.css": "5d2d51ebcd87e63eec0cd7709888614058cb297a"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
